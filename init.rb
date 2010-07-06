@@ -1,0 +1,1 @@
+require File.join(File.dirname(__FILE__), 'lib', 'happy_menu')
