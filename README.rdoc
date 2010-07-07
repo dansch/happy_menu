@@ -1,0 +1,43 @@
+== HappyMenu
+
+Tired of setting instance variables in the controller or build your view helpers over and over again to come up with a simple solution to show the user which navigation element is selected?. In fact, all you just want to be is happy again? Let HappyMenu be your rescue. 
+
+== Example
+
+=== Simple Example
+
+  <% happy_menu do %>
+    <% happy_menu_item "Start", dashboard_path, [{:dashboard => [:index]}] %>
+    <% happy_menu_item "Projects", projects_path, [:projects] %>
+    <% happy_menu_item "Log Out", logout_path, nil %>
+  <% end %>
+  
+Let's say you calling the index action on the dashboard controller it will produce:
+
+  <ul>
+    <li><a href="your_dashboard_link" class="selected"></a></li>
+    <li><a href="your_projects_link"></a></li>
+    <li><a href="your_log_out_link"></a></li>
+  </ul>
+  
+=== Advanced Example
+
+Still to come
+
+== Usage
+
+HappyMenu uses the current controller_name and action_name to determine the current selection. It expects an array, where each element can either be a symbol to the the selection on every action or a hash to set the selection on an per action basis.
+
+== Configuration
+
+Still to come
+
+== TODO
+
+* Tests
+* improved documentation
+* Rails version testing
+
+== Project Info
+
+Copyright (c) 2010 Daniel Schoppmann, released under the MIT license

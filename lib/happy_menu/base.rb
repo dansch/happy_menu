@@ -14,7 +14,7 @@ module HappyMenu
     # - html_options: must be an hash of html-attributes
     # - menu_options: to be filled
 
-    def menu(html_options={}, menu_options={}, &block)
+    def happy_menu(html_options={}, menu_options={}, &block)
       return unless block_given?
       
       updated_menu_options = menu_options.symbolize_keys.reverse_merge HappyMenu::Base.menu_options
@@ -36,7 +36,7 @@ module HappyMenu
     # - link_options: html attributes for a-element
     # - menu_options: replace default values of MenuBuilder. Should be set globally, e.g. in an initialier
 
-    def menu_item(item, path, selectors, item_options={}, link_options={}, menu_options={}, &block)
+    def happy_menu_item(item, path, selectors, item_options={}, link_options={}, menu_options={}, &block)
       updated_menu_options = menu_options.symbolize_keys.reverse_merge HappyMenu::Base.menu_options
       
       selector_class = HappyMenu::Selector.new(self, updated_menu_options, selectors).result
