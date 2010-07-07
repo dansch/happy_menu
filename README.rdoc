@@ -1,6 +1,6 @@
 == HappyMenu
 
-Tired of setting instance variables in the controller or build your view helpers over and over again to come up with a simple solution to show the user which navigation element is selected?. In fact, all you just want to be is happy again? Let HappyMenu be your rescue. 
+Tired of setting instance variables in the controller or building view helpers over and over again to come up with a simple solution for a tab menu selection? In fact, all you want is being happy again? Let HappyMenu help you!
 
 == Example
 
