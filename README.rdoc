@@ -1,6 +1,6 @@
 == HappyMenu
 
-Tired of setting instance variables in the controller or building view helpers over and over again to come up with a simple solution for a tab menu selection? In fact, all you want is being happy again? Let HappyMenu help you!
+HTML-Menus made simple. No crazy view logic, no instance variables in controllers - you can be happy with your menu again.
 
 == Example
 
@@ -26,18 +26,21 @@ Still to come
 
 == Usage
 
-HappyMenu uses the current controller_name and action_name to determine the current selection. It expects an array, where each element can either be a symbol to the the selection on every action or a hash to set the selection on an per action basis.
+HappyMenu provides you with ViewHelpers and performs the selection of a menu item based on the current controller action. It uses the current controller_name and action_name to determine the current selection. It expects an array or nil. Each array element can either be a symbol or a hash. Use a symbol if alle controller actions should be selected, a hash to set the selection on an per action basis.
 
 == Configuration
 
-Still to come
+HappyMenu can either be customized on a global level or via each method call. See base.rb for details.
 
 == TODO
 
 * Tests
 * improved documentation
 * Rails version testing
+* Fix indentation for haml templates
 
 == Project Info
+
+Thanks to Henning Peters for the initial idea.
 
 Copyright (c) 2010 Daniel Schoppmann, released under the MIT license
