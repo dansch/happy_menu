@@ -2,7 +2,6 @@ module HappyMenu
   module Base
     @@menu_options = {
       :active_class => 'selected',
-      :inactive_class => 'not-selected',
       :menu_tag => :ul,
       :menu_item_tag => :li,
       :active_link_wrapper => true
@@ -12,7 +11,7 @@ module HappyMenu
     # creates an outer tag (defaults to ul-Tag)
     # accepcts block, which might contain menu_items or further menus
     # - html_options: must be an hash of html-attributes
-    # - menu_options: to be filled
+    # - menu_options: must be an hash. Can be used to overwrite default values
 
     def happy_menu(html_options={}, menu_options={}, &block)
       return unless block_given?
@@ -28,13 +27,13 @@ module HappyMenu
 
     # creates an inner tag (defaults to li-Tag)
     # accepts block, so can be nested or filled with any html
-    # - selectors: must be an array. Can contain Symbols, Strings which will be compared to the controller_name,
-    #             or Hashed, where the key will be compared to the controller_name, the value to the action_name.
-    #             Value can either be an array of Symbols
-    #             E.g. [:users, {:projects => [:index, :edit]}, :tasks]
-    # - item_options: html attributes for li-element
+    # - selectors: must be an array. Can contain Symbols, Strings and/or Hashes. Symbols and Strings will be 
+    #              compared to the controller_name. The key of a hash will be compared to the controller_name, the value to the action_name.
+    #              Value can either be an array of Symbols or nil for all actions.
+    #              E.g. [:users, {:projects => [:index, :edit]}, :tasks]
+    # - item_options: html attributes for item tag-element
     # - link_options: html attributes for a-element
-    # - menu_options: replace default values of MenuBuilder. Should be set globally, e.g. in an initialier
+    # - menu_options: must be an hash. Can be used to overwrite default values
 
     def happy_menu_item(item, path, selectors, item_options={}, link_options={}, menu_options={}, &block)
       updated_menu_options = menu_options.symbolize_keys.reverse_merge HappyMenu::Base.menu_options

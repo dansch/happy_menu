@@ -22,14 +22,15 @@ module HappyMenu
           elsif selector.values.first.is_a?(Array) and selector.values.first.include?(template.action_name.to_sym)
             return options[:active_class]
           else
-            return options[:inactive_class]
+            return nil
           end
         elsif selector.is_a?(Symbol) or selector.is_a?(String)
-          return template.controller_name.to_sym == selector ? options[:active_class] : options[:inactive_class]
+          return template.controller_name.to_sym == selector ? options[:active_class] : nil
         else
-          return options[:inactive_class]
+          return nil
         end
       end
     end
+    
   end
 end
