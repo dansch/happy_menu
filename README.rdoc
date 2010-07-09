@@ -1,6 +1,6 @@
 == HappyMenu
 
-HTML-Menus made simple. No crazy view logic, no instance variables in controllers - you can be happy with your menu again.
+Simple highlighted HTML-Menus in Rails. No more crazy view logic, no instance variables in controllers - you can be happy with your menu again.
 
 == Example
 
@@ -34,7 +34,6 @@ HappyMenu can either be customized on a global level or via each method call. Se
 
 == TODO
 
-* Tests
 * improved documentation
 * Rails version testing
 * Fix indentation for haml templates
