@@ -73,6 +73,6 @@ class HappyMenuTest < ActionView::TestCase
     # stub controller_name
     # expected = "<li><a href=\"/projects\">Test</a></li>"
     # assert_equal expected, happy_menu_item("Test", projects_path, [:projects])
-  end
+  #end
   
 end
