@@ -12,7 +12,7 @@ Simple highlighted HTML-Menus in Rails. No more crazy view logic, no instance va
     <% happy_menu_item "Log Out", logout_path, nil %>
   <% end %>
   
-Let's say you calling the index action on the dashboard controller it will produce:
+Let's say you are calling the dashboard controller's index action. 
 
   <ul>
     <li><a href="your_dashboard_link" class="selected"></a></li>
@@ -26,16 +26,15 @@ Still to come
 
 == Usage
 
-HappyMenu provides you with ViewHelpers and performs the selection of a menu item based on the current controller action. It uses the current controller_name and action_name to determine the current selection. It expects an array or nil. Each array element can either be a symbol or a hash. Use a symbol if alle controller actions should be selected, a hash to set the selection on an per action basis.
+HappyMenu provides you simple ViewHelpers and performs the selection of a menu item based on the current controller action. It uses the controller_name and action_name to determine the current selection. It expects an array or nil. Each array element can either be a symbol or a hash. Use a symbol if all controller actions should be selected, a hash to set the selection per action.
 
 == Configuration
 
-HappyMenu can either be customized on a global level or via each method call. See base.rb for details.
+HappyMenu can either be customized on a global level or via each method call. See HappyMenu::Base for details.
 
 == TODO
 
-* improved documentation
-* Rails version testing
+* Rails version testing (Not tested in Rails 3 yet)
 * Fix indentation for haml templates
 
 == Project Info
