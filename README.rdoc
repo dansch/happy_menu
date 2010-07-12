@@ -26,7 +26,7 @@ Still to come
 
 == Usage
 
-HappyMenu provides you simple ViewHelpers and performs the selection of a menu item based on the current controller action. It uses the controller_name and action_name to determine the current selection. It expects an array or nil. Each array element can either be a symbol or a hash. Use a symbol if all controller actions should be selected, a hash to set the selection per action.
+HappyMenu provides simple ViewHelpers and performs the selection of a menu item based on the current controller action. It uses the controller_name and action_name to determine the current selection. It expects an array or nil. Each array element can either be a symbol or a hash. Use a symbol if all controller actions should be selected, a hash to set the selection per action.
 
 == Configuration
 
